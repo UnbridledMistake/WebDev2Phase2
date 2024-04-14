@@ -33,9 +33,21 @@ function Home() {
       <form className="flex flex-col w-full h-full justify-between" onSubmit={handleSubmit}>
         <h1 className="my-4 text-6xl font-bold">Welcome to our application.</h1>
         <h2 className="my-4">Please log in to continue.</h2>
-        {error && <p className="m-4 p-4 bg-red-100 rounded-md">{errorMessage}</p>}
-        <input className="w-64 my-4 p-2 bg-gray-600 text-white rounded-md" type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
-        <input className="w-64 my-4 p-2 bg-gray-600 text-white rounded-md" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+        {error && <p className="my-4 p-4 bg-red-100 rounded-md">{errorMessage}</p>}
+        <input
+          className="w-64 my-4 p-2 bg-gray-600 text-white rounded-md"
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          />
+        <input
+          className="w-64 my-4 p-2 bg-gray-600 text-white rounded-md"
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          />
         <button className="w-24 my-4 p-2 bg-blue-400 rounded-md" type="submit">Log In</button>
       </form>
     </main>
